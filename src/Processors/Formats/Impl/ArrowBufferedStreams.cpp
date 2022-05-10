@@ -1,7 +1,3 @@
-#ifdef HAS_RESERVED_IDENTIFIER
-#pragma clang diagnostic ignored "-Wreserved-identifier"
-#endif
-
 #include "ArrowBufferedStreams.h"
 
 #if USE_ARROW || USE_ORC || USE_PARQUET
@@ -15,6 +11,10 @@
 #include <arrow/result.h>
 
 #include <sys/stat.h>
+
+#ifdef __clang__
+#  pragma clang diagnostic ignored "-Wreserved-identifier"
+#endif
 
 
 namespace DB

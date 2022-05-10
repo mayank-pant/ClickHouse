@@ -1,5 +1,5 @@
-#ifdef HAS_RESERVED_IDENTIFIER
-#pragma clang diagnostic ignored "-Wreserved-identifier"
+#ifdef __clang__
+#  pragma clang diagnostic ignored "-Wreserved-identifier"
 #endif
 
 /// This code was based on the code by Fedor Korotkiy https://www.linkedin.com/in/fedor-korotkiy-659a1838/

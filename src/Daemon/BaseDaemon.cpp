@@ -1,5 +1,5 @@
-#ifdef HAS_RESERVED_IDENTIFIER
-#pragma clang diagnostic ignored "-Wreserved-identifier"
+#ifdef __clang__
+#  pragma clang diagnostic ignored "-Wreserved-identifier"
 #endif
 
 #include <Daemon/BaseDaemon.h>

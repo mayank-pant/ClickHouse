@@ -53,8 +53,8 @@
         M(int, pthread_mutex_unlock, pthread_mutex_t * arg)
 #endif
 
-#ifdef HAS_RESERVED_IDENTIFIER
-#pragma clang diagnostic ignored "-Wreserved-identifier"
+#ifdef __clang__
+#  pragma clang diagnostic ignored "-Wreserved-identifier"
 #endif
 
 namespace DB
